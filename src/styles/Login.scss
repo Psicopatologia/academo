@@ -1,0 +1,65 @@
+@import 'vars';
+
+.loginPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 30%;
+}
+
+.loginContainer__title {
+    font-size: 4em;
+    font-weight: bold;
+    color: $blue;
+    margin-top: 0;
+}
+
+.loginContainer__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.loginContainer__form__label {
+    color: $brown;
+    font-size: 1.2em;
+}
+
+.loginContainer__form__input {
+    font-size: 1em;
+    padding: .5em;
+    margin-bottom: 2.6em;
+    margin-top: .5em;
+    border: none;
+    background-color: rgba($white, 0.5);
+}
+
+.loginContainer__form__input:focus {
+    outline: none;
+    border-bottom: $blue solid 3px;
+    padding-bottom: calc(.5em - 3px);
+}
+
+.loginContainer__form__submit--loading {
+    padding: .6em;
+}
+
+.loginContainer__form__submit {
+    margin: 1em;
+    width: fit-content;
+    align-self: center;
+}
+
+.loginContainer__form__link {
+    color: $brown;
+    align-self: center;
+}
