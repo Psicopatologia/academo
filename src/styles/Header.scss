@@ -12,17 +12,17 @@
 
 .navbar__logo {
     padding: .5em;
-    color: var(--blue);
+    color: $blue;
     width:fit-content;
     font-size: 2em;
     font-weight: bold;
-    background-color: var(--yellow);
+    background-color: $yellow;
 }
 .navbar__menu {
     margin-right: 5em;
 }
 .navbar__menu__link {
-    color: var(--brown);
+    color: $brown;
     font-size: 1.2em;
     margin: .5em;
 }
