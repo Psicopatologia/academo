@@ -1,0 +1,25 @@
+@import 'vars';
+
+.btn {
+    border: none;
+    background: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.btn--blue {
+    background-color: $blue;
+    color: $white;
+    padding: .5em 1em;
+}
+
+.btn--white {
+    color: $blue;
+    border: $blue solid .2em;
+    padding: .3em .8em;
+}
+
+.btn--blue:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
