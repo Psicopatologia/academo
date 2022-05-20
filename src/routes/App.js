@@ -6,7 +6,7 @@ import '../styles/global.scss'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/academo">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
