@@ -20,7 +20,7 @@ function Login() {
             setTimeout(() => {
                 setLoading(false)
                 window.location.replace("/")
-            }
+                }
                 , 1000
             )
         }

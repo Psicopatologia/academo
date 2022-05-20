@@ -4,9 +4,9 @@ import '../styles/Header.scss'
 function Header({ children }) {
     return (
         <nav className="navbar">
-            <div className="navbar__logo">
+            <a className="navbar__logo" href="/">
                 AD
-            </div>
+            </a>
             <div className="navbar__menu">
                 { children }
             </div>
