@@ -1,0 +1,88 @@
+@import 'vars';
+
+.homePage {
+    background-color: $yellow;
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.homePage__leftContainer {
+    width: 40%;
+    padding-top: 4em;
+    margin: 4em;
+    padding-bottom: 8em;
+}
+
+.homePage__leftContainer__title {
+    font-size: 4em;
+    font-weight: bold;
+    color: $blue;
+    margin: 0em;
+}
+
+.homePage__leftContainer__text {
+    font-size: 1.5em;
+    font-weight: 200;
+    color: $brown;
+    margin: 0 0 2em 0;
+}
+.homePage__rightContainer {
+    width: 40%;
+    max-height: calc(100% - 4em);
+}
+
+.guitarIllustration__rightArm {
+    animation: rightArm 1s infinite alternate ease-in-out;
+}
+
+@keyframes rightArm {
+    0% {transform: translate(-.05em, -.1em);};
+}
+
+.guitarIllustration__leftArm {
+    animation: leftArm .5s infinite alternate ease-in-out;
+}
+
+@keyframes leftArm {
+    0% {transform: translate(.1em, .1em);};
+}
+
+.guitarIllustration__note {
+    animation: rotateNote 1s infinite alternate ease-in-out;
+}
+
+.guitarIllustration__note--first {
+    animation-delay: -1s;
+}
+
+.guitarIllustration__note--second {
+    animation-delay: .5s;
+}
+
+.guitarIllustration__note--third {
+    animation-delay: .75s;
+}
+
+.guitarIllustration__hand {
+    animation-delay: .1s;
+}
+
+@keyframes rotateNote {
+    0% {transform: rotate(-3deg);};
+    100% {transform: rotate(3deg);}
+}
+
+@media screen and (max-width: 600px) {
+    .homePage__rightContainer {
+        width: 100%;
+    }
+    .homePage__leftContainer {
+        width: 100%;
+        height: fit-content;
+    }
+}
