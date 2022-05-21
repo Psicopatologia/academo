@@ -25,7 +25,7 @@ function ClassPage({ move }) {
                     </span>
                     <Arrow />
                     <DropdownUser active={userMenu}>
-                        <a onClick={() => move(0)} className="dropdownUser__link" href="#">Salir</a>
+                        <a className="dropdownUser__link" href="/">Salir</a>
                     </DropdownUser>
                 </div>
             </Header>
@@ -58,7 +58,7 @@ function ClassPage({ move }) {
                     <div className="ratingContainer">
                         {
                             users.map(
-                                (user) => (
+                                (user, index) => (
                                     <div className="ratingContainer__item">
                                         <div className="ratingContainer__item__imgContainer">
                                             <img className="ratingContainer__item__imgContainer__img" src={user.picture.large} />

@@ -1,6 +1,4 @@
-import { render } from "@testing-library/react";
 import React from "react";
-import { ReactComponent as Star } from '../assets/star.svg'
 import '../styles/StarRating.scss'
 function StarRating({ rating }) {
     return (
