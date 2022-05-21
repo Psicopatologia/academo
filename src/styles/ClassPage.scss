@@ -1,0 +1,62 @@
+@import 'vars';
+
+.classPage {
+    min-height: 100vh;
+    width: 70vw;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 5em 15vw;
+}
+
+.videoContainer {
+    width: 100%;
+    height: 35vw;
+}
+.videoContainer__video{
+    height:100%;
+    width:100%;
+}
+
+.classPage__info {
+    align-self: flex-start;
+}
+
+.classPage__info__title {
+    color: $brown;
+    margin: 0;
+}
+
+.classPage__info__author {
+    color: $blue;
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.ratingContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    justify-content: space-around;
+}
+
+.ratingContainer__item {
+    width: 8em;
+    margin: 1em;
+}
+.ratingContainer__item__imgContainer {
+    width:8em;
+    height: 8em;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+}
+.ratingContainer__item__imgContainer__img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
