@@ -12,17 +12,16 @@ function ClassPage({ move }) {
     const getUsers = async () => {
         const response = await fetch(API_URL);
         const jsonData = await response.json();
-        console.log(jsonData.results)
         setUsers(jsonData.results)
     }
-    React.useEffect(()=>getUsers, [])
+    React.useEffect(() => getUsers, [])
     return (
         <React.Fragment>
             <Header>
-                <div onClick={()=>setUserMenu(!userMenu)} className="navbar__user">
-                    <img src={users.length>0? users[0].picture.large : ""} className="navbar__user__img" />
+                <div onClick={() => setUserMenu(!userMenu)} className="navbar__user">
+                    <img src={users.length > 0 ? users[0].picture.large : ""} className="navbar__user__img" />
                     <span className="navbar__user__name">
-                        {users.length>0?`${users[0].name.first} ${users[0].name.last}`:''}
+                        {users.length > 0 ? `${users[0].name.first} ${users[0].name.last}` : ''}
                     </span>
                     <Arrow />
                     <DropdownUser active={userMenu}>
@@ -44,7 +43,7 @@ function ClassPage({ move }) {
                         allowFullScreen
                     />
                 </div>
-                <div className="classPage__info"> 
+                <div className="classPage__info">
                     <h1 className="classPage__info__title">
                         Capricho Árabe
                     </h1>
@@ -60,17 +59,17 @@ function ClassPage({ move }) {
                         {
                             users.map(
                                 (user) => (
-                        <div className="ratingContainer__item">
-                            <div className="ratingContainer__item__imgContainer">
-                                <img className="ratingContainer__item__imgContainer__img" src={user.picture.large} />
-                            </div>
-                            <p>
-                                {`${user.name.first} ${user.name.last}`}
-                            </p>
-                            <div className="ratingContainer__item__star">
-                                <StarRating rating={Math.floor(Math.random()*5+1)} />
-                            </div>
-                        </div>
+                                    <div className="ratingContainer__item">
+                                        <div className="ratingContainer__item__imgContainer">
+                                            <img className="ratingContainer__item__imgContainer__img" src={user.picture.large} />
+                                        </div>
+                                        <p>
+                                            {`${user.name.first} ${user.name.last}`}
+                                        </p>
+                                        <div className="ratingContainer__item__star">
+                                            <StarRating rating={Math.floor(Math.random() * 5 + 1)} />
+                                        </div>
+                                    </div>
 
                                 )
                             )

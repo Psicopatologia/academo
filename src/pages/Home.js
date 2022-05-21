@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../components/Header';
 import { Button } from '../components/Button';
-import {ReactComponent as GuitarIllustration} from '../assets/playGuitar.svg'
+import { ReactComponent as GuitarIllustration } from '../assets/playGuitar.svg'
 import '../styles/Home.scss'
 
 function Home(props) {

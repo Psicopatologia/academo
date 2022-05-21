@@ -13,15 +13,17 @@
 .navbar__logo {
     padding: .5em;
     color: $blue;
-    width:fit-content;
+    width: fit-content;
     font-size: 2em;
     font-weight: bold;
     background-color: $yellow;
     text-decoration: none;
 }
+
 .navbar__menu {
     margin-right: 5em;
 }
+
 .navbar__menu__link {
     color: $brown;
     font-size: 1.2em;

@@ -31,6 +31,7 @@
     color: $brown;
     margin: 0 0 2em 0;
 }
+
 .homePage__rightContainer {
     width: 40%;
     max-height: calc(100% - 4em);
@@ -41,7 +42,11 @@
 }
 
 @keyframes rightArm {
-    0% {transform: translate(-.05em, -.1em);};
+    0% {
+        transform: translate(-.05em, -.1em);
+    }
+
+    ;
 }
 
 .guitarIllustration__leftArm {
@@ -49,7 +54,11 @@
 }
 
 @keyframes leftArm {
-    0% {transform: translate(.1em, .1em);};
+    0% {
+        transform: translate(.1em, .1em);
+    }
+
+    ;
 }
 
 .guitarIllustration__note {
@@ -73,14 +82,22 @@
 }
 
 @keyframes rotateNote {
-    0% {transform: rotate(-3deg);};
-    100% {transform: rotate(3deg);}
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    ;
+
+    100% {
+        transform: rotate(3deg);
+    }
 }
 
 @media screen and (max-width: 600px) {
     .homePage__rightContainer {
         width: 100%;
     }
+
     .homePage__leftContainer {
         width: 100%;
         height: fit-content;

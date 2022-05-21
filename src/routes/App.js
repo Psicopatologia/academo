@@ -5,7 +5,7 @@ import { Login } from "../pages/Login";
 import '../styles/global.scss'
 
 function App() {
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = React.useState(0);
   const render = () => {
     switch (page) {
       case 0:
@@ -13,7 +13,7 @@ function App() {
       case 1:
         return <Login move={setPage} />
       case 2:
-        return <ClassPage move={setPage}/>
+        return <ClassPage move={setPage} />
       default:
         return <Home />
     }

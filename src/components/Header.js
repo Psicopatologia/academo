@@ -8,7 +8,7 @@ function Header({ children }) {
                 AD
             </a>
             <div className="navbar__menu">
-                { children }
+                {children}
             </div>
         </nav>
     )

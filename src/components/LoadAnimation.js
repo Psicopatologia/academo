@@ -1,12 +1,12 @@
 import React from "react";
 import '../styles/LoadAnimation.scss'
-function LoadAnimation({w, h}) {
+function LoadAnimation({ w, h }) {
     console.log(w)
     const animationSize = {
-        width:w,
-        height:h
+        width: w,
+        height: h
     }
-    return(
+    return (
         <div className="loadAnimation" style={animationSize}>
             <div className="loadAnimationItem"></div>
             <div className="loadAnimationItem"></div>
