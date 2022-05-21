@@ -52,8 +52,8 @@ Parametros:
 - `color` define el color del botón
 
 Colores disponibles
--`blue` variación azul
--`white` variación blanca
+- `blue` variación azul
+- `white` variación blanca
 
 ### Header
 Es el header estándar de la aplicación, este tiene un logo a la izquierde siempre los hijos que se le de será lo que mostrará a su derecha sean links o la informaciónde sesión
