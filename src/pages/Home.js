@@ -20,7 +20,7 @@ function Home(props) {
                     <h1 className="homePage__leftContainer__title">AcaDemo</h1>
                     <p className="homePage__leftContainer__text">La mayor comunidad educativa en español para aprender a tocar guitarra</p>
                     <a href='/login'>
-                        <Button className="btn--blue homePage__leftContainer__button">Comenzar</Button>
+                        <Button color="blue"  className="homePage__leftContainer__button">Comenzar</Button>
                     </a>
                 </div>
                 <div className='homePage__rightContainer'>

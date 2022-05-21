@@ -50,7 +50,8 @@ function Login() {
                             className="loginContainer__form__input"
                         />
                         <Button
-                            className={`btn btn--blue
+                            color="blue"
+                            className={`
                                 loginContainer__form__submit
                                 ${(loading) ? 'loginContainer__form__submit--loading' : ''}`}
                             click={handleSubmit}

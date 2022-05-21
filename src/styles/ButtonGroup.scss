@@ -1,0 +1,11 @@
+.buttonGroup > * {
+    border-radius: 0;
+}
+
+.buttonGroup >.btn:first-child {
+    border-radius: 1em 0 0 1em;
+}
+
+.buttonGroup > .btn:last-child {
+    border-radius: 0 1em 1em 0;
+}

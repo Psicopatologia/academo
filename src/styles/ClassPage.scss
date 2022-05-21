@@ -20,7 +20,17 @@
 }
 
 .classPage__info {
-    align-self: flex-start;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.classPage__info > * {
+    width: fit-content;
 }
 
 .classPage__info__title {
@@ -47,5 +57,12 @@
     .videoContainer {
         width: 100%;
         height: 50vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .classPage__info .btn {
+        font-size: 1em;
+        border-radius: 0;
     }
 }

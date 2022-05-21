@@ -9,7 +9,6 @@ Comunidad educativa. [Aplicación desplegada aquí](https://academo-sebastian.he
   * [Enrutamiento](#enrutamiento)
   * [Componentes](#componentes)
     + [Button](#button)
-      - [Clases adicionales disponibles](#clases-adicionales-disponibles)
     + [Header](#header)
     + [LoadAnimation](#loadanimation)
     + [StarRating](#starrating)
@@ -17,6 +16,7 @@ Comunidad educativa. [Aplicación desplegada aquí](https://academo-sebastian.he
   * [Containers](#containers)
     + [DropDownUser](#dropdownuser)
     + [RatingContainer](#ratingcontainer)
+    + [ButtonGroup](#buttongroup)
   * [Pages](#pages)
     + [Home](#home)
     + [Login](#login)
@@ -49,10 +49,11 @@ Brinda un botón html con el estilo estándar de la aplicación.
 Parametros:
 - `click` que determina la funcion a ejecutar al ser presionado
 - `className` que recibe las clases adicionales que se le quieran dar
+- `color` define el color del botón
 
-Clases adicionales disponibles
--`btn--blue` que nos dará la variación azul del botón
--`btn--white` que nos dará la variación blanca del botón
+Colores disponibles
+-`blue` variación azul
+-`white` variación blanca
 
 ### Header
 Es el header estándar de la aplicación, este tiene un logo a la izquierde siempre los hijos que se le de será lo que mostrará a su derecha sean links o la informaciónde sesión
@@ -85,7 +86,10 @@ Mostrara dentro de sí los hijos que se le den.
 
 ### RatingContainer
 Contenedor que contiene reseñas de estudiantes.
-Por ahora recibe como parámetro `classID` que determina el número de estudiantes a mostrar pero en el futuró se usará para buscar las opiniones de clases especificas
+Por ahora recibe como parámetro `classID` que determina el número de estudiantes a mostrar pero en el futuró se usará para buscar las opiniones de clases especificas.
+
+### ButtonGroup
+Contenedor que recibe botones y los junta dejando los de los rincones con bordo redondeado
 
 ## Pages
 

@@ -4,6 +4,8 @@ import { DropdownUser } from "../containers/DropdownUser";
 import { ReactComponent as Arrow } from "../assets/down.svg";
 import '../styles/ClassPage.scss'
 import { RatingContainer } from "../containers/RatingContainer";
+import { ButtonGroup } from "../containers/ButtonGroup";
+import { Button } from "../components/Button";
 
 function ClassPage() {
     const [userMenu, setUserMenu] = React.useState(false)
@@ -33,12 +35,22 @@ function ClassPage() {
                     />
                 </div>
                 <div className="classPage__info">
-                    <h1 className="classPage__info__title">
-                        Capricho Árabe
-                    </h1>
-                    <p className="classPage__info__author">
-                        Francisco Tárrega
-                    </p>
+                    <div>
+                        <h1 className="classPage__info__title">
+                            Capricho Árabe
+                        </h1>
+                        <p className="classPage__info__author">
+                            Francisco Tárrega
+                        </p>
+                    </div>
+                    <ButtonGroup>
+                        <Button color="white">
+                            Clase anterior
+                        </Button>
+                        <Button color="blue">
+                            Clase siguiente
+                        </Button>
+                    </ButtonGroup>
                 </div>
                 <section className="ratingSection">
                     <RatingContainer classID={20} />
