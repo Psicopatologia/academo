@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# AcaDemo
+Comunidad educativa. [Aplicación desplegada aquí](https://academo-sebastian.herokuapp.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Indice
+  * [Introducción](#introducci-n)
+    + [Sistema de diseño](#sistema-de-dise-o)
+    + [Estructura del proyecto](#estructura-del-proyecto)
+    + [Estilos](#estilos)
+  * [Enrutamiento](#enrutamiento)
+  * [Componentes](#componentes)
+    + [Button](#button)
+      - [Clases adicionales disponibles](#clases-adicionales-disponibles)
+    + [Header](#header)
+    + [LoadAnimation](#loadanimation)
+    + [StarRating](#starrating)
+    + [UserRating](#userrating)
+  * [Containers](#containers)
+    + [DropDownUser](#dropdownuser)
+    + [RatingContainer](#ratingcontainer)
+  * [Pages](#pages)
+    + [Home](#home)
+    + [Login](#login)
+    + [ClassPage](#classpage)
 
-## Available Scripts
+## Introducción
+Los patrones seguidos en el proyecto son los siguientes:
 
-In the project directory, you can run:
+### Sistema de diseño
+Se utiliszó Atomic Design pensando en la modularidad y reusabilidad del código
 
-### `npm start`
+### Estructura del proyecto
+El código de la aplicación se encuentra dentro de la carpeta `src`. Dentro de esta se sigue muy de cerca Atomic Design y se dividen las carpetas usando nomenclatura en ingles así: `components` `containers`  y `pages`
+Están las siguientes carpetas adicionales
+- `assets` para almacenar imagenes y otras utilidades a futuro
+- `routes` donde se almacena el código encargado del enrutamiento
+- `styles` donde se almacena todos los estilso de la aplicación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Estilos
+Se realizaron siguiendo BEM en el siguiente formato `contenedor__elemento--modificador` en caso de usar un nombre de dos palabras se usó camel case (`camelCase`). Los nombres de los archivos son iguales al código que se aplique.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Enrutamiento
+El enrutamiento de la aplicación se realizó con la librería React Router, esta se encuentar en el archivo `src/routes/App.js` donde se relaciona una ruta a un componente de react que será una pagina.
 
-### `npm test`
+## Componentes
+Todos almacenados en `src/components` 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Button
+Brinda un botón html con el estilo estándar de la aplicación.
+Parametros:
+- `click` que determina la funcion a ejecutar al ser presionado
+- `className` que recibe las clases adicionales que se le quieran dar
 
-### `npm run build`
+Clases adicionales disponibles
+-`btn--blue` que nos dará la variación azul del botón
+-`btn--white` que nos dará la variación blanca del botón
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Header
+Es el header estándar de la aplicación, este tiene un logo a la izquierde siempre los hijos que se le de será lo que mostrará a su derecha sean links o la informaciónde sesión
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### LoadAnimation
+Es una animación básica de carga circular.
+Parametros:
+- `color` si se omite la animación será blanca, solo se ha añadido la opcion *blue* para una animación azúl
+- `w` que define su ancho
+- `h` que define su alto
+> actualmente ambos parametros de tamaño deben ser iguales
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### StarRating
+Retona las estrellas (5) de una evaluación usando números enteros.
+Parametros:
+- `rating` el número de estrellas que serán coloreadas
 
-### `npm run eject`
+### UserRating
+Muestra una foto del usuario con su nombre y calificación de estrellas.
+Parametros:
+- `picture` link a la foto del usuario
+- `name` nombre del usuario
+- `review` Calificación del usuario dle 1 al 5
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Containers
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### DropDownUser
+Está pensado para mostrar las opciones al precionar un menú dropdown de la barra de navegación.
+Mostrara dentro de sí los hijos que se le den.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### RatingContainer
+Contenedor que contiene reseñas de estudiantes.
+Por ahora recibe como parámetro `classID` que determina el número de estudiantes a mostrar pero en el futuró se usará para buscar las opiniones de clases especificas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Pages
 
-## Learn More
+### Home
+Pantalla principal de la aplicación en esta se muestra la barra de navegacion con las opcion de *Ingresar* y *Registrarse*, información de la página y una animación.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Login
+Pagina con la cual se loguea el usuario a la aplicación
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ClassPage
+Esta es la página donde se verán las clases, en esta está un video con nombre y autor. La página incluye barra de navegación y una galería con las reviews de los usuarios
