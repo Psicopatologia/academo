@@ -18,6 +18,11 @@
     border-color: $white transparent transparent transparent;
 }
 
+.loadAnimation--blue > .loadAnimationItem {
+    border: 3px solid $blue;
+    border-color: $blue transparent transparent transparent;
+}
+
 .loadAnimation .loadAnimationItem:nth-child(1) {
     animation-delay: -0.45s;
 }

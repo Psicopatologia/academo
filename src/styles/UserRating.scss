@@ -1,0 +1,29 @@
+$img-size: 7em;
+
+.userRating {
+    width: $img-size;
+    margin: 1.5em;
+}
+
+.userRating__imgContainer {
+    width: $img-size;
+    height: $img-size;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.userRating__imgContainer__img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1000px) {
+    .userRating {
+        margin: .5em;
+    }
+}

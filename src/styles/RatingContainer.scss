@@ -1,0 +1,18 @@
+@import 'vars';
+
+.ratingContainer {
+    font-size: 1.1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    color: $brown;
+}
+
+.ratingTitle {
+    color: $brown;
+}
+
+.ratingLoad {
+    align-self: center;
+}
