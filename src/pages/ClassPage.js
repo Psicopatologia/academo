@@ -1,21 +1,34 @@
 import React from "react";
 import { Header } from "../components/Header";
+import { StarRating } from "../components/StarRating";
+import { DropdownUser } from "../containers/DropdownUser";
+import { ReactComponent as Arrow } from "../assets/down.svg";
 import '../styles/ClassPage.scss'
 
-function ClassPage() {
-    const [users, setUsers] = [[]];
+function ClassPage({ move }) {
+    const [users, setUsers] = React.useState([]);
+    const [userMenu, setUserMenu] = React.useState(false)
     const API_URL = 'https://randomuser.me/api/?results=20';
     const getUsers = async () => {
         const response = await fetch(API_URL);
-        console.log(response.results)
-        //const jsonData = await JSON.parse(response.results);
-        //setUsers(jsonData)
+        const jsonData = await response.json();
+        console.log(jsonData.results)
+        setUsers(jsonData.results)
     }
-    React.useEffect(()=>{getUsers()}, []) 
+    React.useEffect(()=>getUsers, [])
     return (
         <React.Fragment>
             <Header>
-
+                <div onClick={()=>setUserMenu(!userMenu)} className="navbar__user">
+                    <img src={users.length>0? users[0].picture.large : ""} className="navbar__user__img" />
+                    <span className="navbar__user__name">
+                        {users.length>0?`${users[0].name.first} ${users[0].name.last}`:''}
+                    </span>
+                    <Arrow />
+                    <DropdownUser active={userMenu}>
+                        <a onClick={() => move(0)} className="dropdownUser__link" href="#">Salir</a>
+                    </DropdownUser>
+                </div>
             </Header>
             <main className="classPage">
                 <div className="videoContainer">
@@ -49,13 +62,13 @@ function ClassPage() {
                                 (user) => (
                         <div className="ratingContainer__item">
                             <div className="ratingContainer__item__imgContainer">
-                                <img className="ratingContainer__item__imgContainer__img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464" />
+                                <img className="ratingContainer__item__imgContainer__img" src={user.picture.large} />
                             </div>
                             <p>
-                                {user.name.first}
+                                {`${user.name.first} ${user.name.last}`}
                             </p>
-                            <div>
-                                [*******]
+                            <div className="ratingContainer__item__star">
+                                <StarRating rating={Math.floor(Math.random()*5+1)} />
                             </div>
                         </div>
 

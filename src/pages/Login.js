@@ -4,7 +4,7 @@ import { Button } from '../components/Button';
 import { LoadAnimation } from "../components/LoadAnimation";
 import '../styles/Login.scss'
 
-function Login() {
+function Login({move}) {
     const form = React.useRef(null);
     const [loading, setLoading] = React.useState(false)
 
@@ -19,7 +19,7 @@ function Login() {
             }
             setTimeout(() => {
                 setLoading(false)
-                window.location.replace("/")
+                move(2)
                 }
                 , 1000
             )

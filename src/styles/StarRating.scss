@@ -1,0 +1,12 @@
+@import 'vars';
+
+.starRating__star {
+    width: 1.3em;
+    stroke: $blue;
+    stroke-width: 1px;
+    fill: $blue;
+}
+
+.starRating__star--active {
+    fill: $yellow;
+}

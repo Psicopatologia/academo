@@ -32,7 +32,28 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 1000px) {
+.navbar__user {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    color: $blue;
+    background-color: $white;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.navbar__user__img {
+    width: 1.5em;
+    border-radius: 50%;
+    margin-right: .5em;
+    border: $blue solid 2px;
+}
+
+.navbar__user__arrow {
+    width: 1em;
+}
+
+@media screen and (max-width: 600px) {
     .navbar__menu {
         margin: 0;
     }

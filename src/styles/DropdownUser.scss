@@ -1,0 +1,28 @@
+@import 'vars';
+
+.dropdownUser {
+    background-color: $blue;
+    padding: 1em;
+    border-radius: 0 0 1em 1em;
+    text-align: right;
+    position: absolute;
+    right: 5em;
+    min-width:inherit;
+    font-size: 1em;
+    display: none;
+    margin-top: 5em;
+}
+
+.dropdownUser__link {
+    color: $white;
+}
+
+.dropdownUser--active {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .dropdownUser {
+        right: .5em;
+    }
+}

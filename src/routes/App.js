@@ -5,7 +5,7 @@ import { Login } from "../pages/Login";
 import '../styles/global.scss'
 
 function App() {
-  const [page, setPage] = React.useState(2);
+  const [page, setPage] = React.useState(1);
   const render = () => {
     switch (page) {
       case 0:

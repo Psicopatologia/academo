@@ -34,12 +34,19 @@
     font-weight: bold;
 }
 
+.ratingSection {
+    color: $brown;
+}
+
 .ratingContainer {
+    font-size: 1.1em;
     display: flex;
     flex-wrap: wrap;
     width: 70vw;
     justify-content: space-around;
+    align-items: stretch;
 }
+
 
 .ratingContainer__item {
     width: 8em;
@@ -59,4 +66,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.ratingContainer__item__star {
 }
